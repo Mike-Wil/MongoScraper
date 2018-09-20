@@ -1,0 +1,49 @@
+/* .jumbotron {
+    background-image: url("./images/01.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 500px;
+} */
+
+.scrapeBtn, .removeBtn {
+    margin-top: 50px;
+}
+
+.article {
+    margin-top: 15px;
+}
+
+.imageScrape {
+    margin-right: 10px;
+}
+
+/* body {
+    background-image: url("./images/02.jpg");
+} */
+
+.articleScrape {
+    color: white;
+    border: solid 5px;
+    background-color: grey;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.commentBtn {
+    border-radius: 25px;
+}
+
+.imageScrape {
+    float: left;
+}
+
+#modalTitle, #comment {
+    text-align: center;
+}
+
+.deleteBtn {
+    margin-left: 20%
+}
