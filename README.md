@@ -1,51 +1,27 @@
-# MongoScraper
+# Bloody-Disgusting MongoDB Scraper
 
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Scraping With Mongoose</title>
-    <style>
-      body { background-color: #F2F6D0 }
-      #wrapper {
-        width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 5%;
-      }
-      #articles {
-        display: inline-block;
-        overflow: auto;
-        width: 60%;
-        height: 700px;
-      }
-      #notes {
-        float: right;
-        width: 30%;
-      }
-      textarea, input {
-        display: block;
-        width: 100%;
-        background-color: #FCF5C7;
-      }
-      input {
-        height: 36px;
-        font-size: 24px;
-      }
-      textarea {
-        height: 200px;
-        font-size: 18px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="wrapper">
-      <h1>Note Scraper</h1>
-      <h2><i>If you can do this...the homework should be no problem.</i></h2>
-      <div id="articles"></div>
-      <div id="notes"></div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-  </body>
-</html>
+This full-stack app scrapes articles from the homepage of bloody-disgusting and let's you save notes about them. 
+
+# Made Using:
+* MongoDB
+* Mongoose
+* Express
+* Handlebars
+* Axios
+
+# Viewing Instructions
+
+To view this app: 
+
+- visit the [deployed page](https://mighty-ocean-29219.herokuapp.com/ "deployed page")
+or
+- Clone this repo onto your local machine, run npm install, and start up the app using node and mongo.
+
+
+# App Instructions
+
+This app will automatically scrape Bloody-Disgusting's homepage and display titles, pictures, a link, and a summary.
+
+The post button can be used to save a comment on any given article.
+
+The delete button allows you to delete an article from the feed.
