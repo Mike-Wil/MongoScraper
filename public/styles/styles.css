@@ -1,12 +1,12 @@
-/* .jumbotron {
-    background-image: url("./images/01.jpg");
+.jumbotron {
+    background-image: url("../images/THE_VOID.jpg");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
     color: white;
     text-align: center;
     height: 500px;
-} */
+}
 
 .scrapeBtn, .removeBtn {
     margin-top: 50px;
@@ -20,9 +20,11 @@
     margin-right: 10px;
 }
 
-/* body {
-    background-image: url("./images/02.jpg");
-} */
+body {
+    /* background-image: url("./images/02.jpg"); */
+    background-color: dimgray;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
 
 .articleScrape {
     color: white;

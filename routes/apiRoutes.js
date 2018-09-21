@@ -5,7 +5,7 @@ var db = require("../models");
 
 module.exports = function (app) {
     //GET route to get all articles
-    app.get("/articles", function (req, res) {
+    app.get("/article", function (req, res) {
         // TODO: Finish the route so it grabs all of the articles
         db.Article.find({}).then(function (dbArticle) {
             res.json(dbArticle)
@@ -24,15 +24,17 @@ module.exports = function (app) {
         });
     });
     //GET route to get article based on id
-    app.get("/articles/:id", function (req, res) {
+    app.get("/article/:id", function (req, res) {
         db.Article.findOne({ _id: req.params.id }).populate('note').then(function (dbArticle) {
             res.json(dbArticle);
+        }).catch(function (err) {
+            res.json(err);
         });
     });
 
     //POST route to saving note on specific article
     // Route for saving/updating an Article's associated Note
-    app.post("/articles/:id", function (req, res) {
+    app.post("/article/:id", function (req, res) {
 
         db.Note.create(req.body)
             .then(function (dbNote) {
@@ -79,9 +81,9 @@ module.exports = function (app) {
                 result.title = $(this).children("a").children("h2").text();
                 result.summary = $(this).children("a").children("p").text();
                 result.link = $(this).children("a").attr("href");
-                results.image = $(this).parent("div.mvp-blog-story-in").parent("div.mvp-blog-story-out")
-                .children("a").children("div.mvp-blog-story-img").children("img")
-                .attr("src");
+                    results.image = $(this).parent("div.mvp-blog-story-in").parent("div.mvp-blog-story-out")
+                    .children("a").children("div.mvp-blog-story-img").children("img")
+                    .attr("src");
                 console.log(result);
                 // Create a new Article using the `result` object built from scraping
                 db.Article.findOne({ title: result.title }).then(function (dbArticle) {

@@ -7,6 +7,7 @@ var mongoose = require("mongoose");
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
 var axios = require("axios");
+// do i want this
 var cheerio = require("cheerio");
 
 var exphbs = require("express-handlebars");
@@ -27,8 +28,9 @@ var app = express();
 // Use morgan logger for logging requests
 // app.use(logger("dev"));
 // Use body-parser for handling form submissions
-app.use(bodyParser.urlencoded({ extended: true }));
+
 // Use express.static to serve the public folder as a static directory
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.engine("handlebars", exphbs({
