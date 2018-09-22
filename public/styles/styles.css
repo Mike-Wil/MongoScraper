@@ -10,6 +10,8 @@
 
 .scrapeBtn, .removeBtn {
     margin-top: 50px;
+    border-radius: 25px;
+    background-color: darkorange;
 }
 
 .article {
@@ -49,3 +51,4 @@ body {
 .deleteBtn {
     margin-left: 20%
 }
+
