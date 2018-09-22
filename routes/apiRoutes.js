@@ -20,7 +20,7 @@ module.exports = function (app) {
                 result.title = $(this).children("a").children("h2").text();
                 result.summary = $(this).children("a").children("p").text();
                 result.link = $(this).children("a").attr("href");
-                    results.image = $(this).parent("div.mvp-blog-story-in").parent("div.mvp-blog-story-out")
+                    result.image = $(this).parent("div.mvp-blog-story-in").parent("div.mvp-blog-story-out")
                     .children("a").children("div.mvp-blog-story-img").children("img")
                     .attr("src");
                 console.log(result);
